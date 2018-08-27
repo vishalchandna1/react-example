@@ -26,3 +26,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.list-items ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: decimal;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.list-items ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.list-items ul li button {
+  height: 50%;
+  border-radius: 50%;
+  margin-left: 30px;
+}
