@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import logo from '../logo.svg';
 import '../App.css';
 
@@ -14,7 +16,6 @@ class App extends Component {
     e.preventDefault();
     this.setState(() => {
       let listData = this.state.listData
-      console.log(this.state)
       return {
         listData: this.state.listItem ? listData.concat([{value: this.state.listItem, id: Math.random(1)}]) : listData,
         listItem:'',
@@ -36,13 +37,17 @@ class App extends Component {
     this.setState(() => { return { listItem: listItem }})
   }
   render() { 
-    console.log(this.state)
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+
+        <p className="App-intro">
+          <Link to={"/"}>Go to HOME PAGE</Link>
+        </p>
+
         <div className="todo-list-container">
           <h1>Welcome to Todo List</h1>
           <div className="list-items">

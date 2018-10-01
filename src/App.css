@@ -33,6 +33,7 @@
   list-style-type: decimal;
   align-items: flex-start;
   flex-direction: column;
+  padding-left: 200px;
 }
 
 .list-items ul li {
