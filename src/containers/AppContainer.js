@@ -1,17 +1,12 @@
 import { connect } from 'react-redux';
-import App from '../App'
-import * as listActions from '../redux/modules/list'
+
+import App from '../App';
+import { requestData } from '../redux/modules/api'
 
 const mapStateToProps = (state) => {
   return {
-    data: state.list
+    list: state.api.list,
   }
 }
 
-const mapDispatchToProps = (dispatch, props) => ({
-  orderList: ({oldIndex, newIndex}) => {
-    dispatch(listActions.orderList(oldIndex, newIndex))
-  }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, { requestData })(App)
