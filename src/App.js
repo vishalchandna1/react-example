@@ -4,8 +4,15 @@ import './App.css';
 
 class App extends Component {
   render() {
+    const analyticsData = {
+      event_name: "xyz",
+      action: "click",
+      category: "chocoloates",
+      label: "Dark chocolate",
+      value: "Lindt",
+    }
     return (
-      <div className="App">
+      <div className="App" data-analytics={ JSON.stringify(analyticsData) }>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
